@@ -1,0 +1,29 @@
+{
+  "name": "registration-consumer-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node dist/index.js",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
+    "generate:migration": "npx prisma migrate",
+    "generate:reset": "npx prisma migrate reset --force",
+    "prisma:studio": "npx prisma studio"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "^4.4.0",
+    "amqplib": "^0.10.3",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "@types/amqplib": "^0.8.2",
+    "@types/node": "^18.7.23",
+    "concurrently": "^7.4.0",
+    "nodemon": "^2.0.20",
+    "prisma": "^4.4.0",
+    "typescript": "^4.8.4"
+  }
+}
